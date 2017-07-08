@@ -13,8 +13,6 @@ npm install --save statful-middleware-express statful-client
 yarn add statful-middleware-express statful-client
 ```
 
-Here you should say what actually happens when you execute the code above.
-
 ## Getting started
 
 ```js
