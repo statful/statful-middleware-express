@@ -5,7 +5,7 @@ module.exports = statful => (req, res, next) => {
   res.on('finish', () =>
     statful.timer('response_time', statfulTimer(), {
       tags: {
-        host: req.host,
+        hostname: req.hostname,
         method: req.method,
         statusCode: res.statusCode,
         route: req.route ? req.route.path : 'unknown_route',
