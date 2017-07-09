@@ -47,4 +47,4 @@ By default, the follow metrics are collected, with the corresponding tags:
 
 ## License
 
-statful-middleware-express is available under the MIT license. See the [LICENSE](https://raw.githubusercontent.com/statful/statful-middleware-express/master/LICENSE) file for more information.
+statful-middleware-express is available under the MIT license. See the [LICENSE](https://raw.githubusercontent.com/statful/statful-middleware-express/master/LICENSE.md) file for more information.
