@@ -2,7 +2,9 @@
 ![expressjs](https://camo.githubusercontent.com/b0c9dc0e2f5bcd190403159a24d4a541e496e30a/68747470733a2f2f636f6c69676f2e696f2f696d616765732f657870726573732e737667)
 # statful-middleware-express
 
-A common pattern in expressjs/restify applications it to gather response times from all received requests, this  middleware takes care of gathering common useful metrics automatically.
+A common pattern in expressjs/restify applications it to gather response times from all received requests, this  middleware takes care of collecting common useful metrics automatically.
+
+[![npm version](https://badge.fury.io/js/statful-middleware-express.svg)](https://badge.fury.io/js/statful-middleware-express) [![Build Status](https://travis-ci.org/statful/statful-middleware-express.svg?branch=master)](https://travis-ci.org/statful/statful-middleware-express)
 
 ## Installing
 
