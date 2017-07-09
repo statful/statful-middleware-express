@@ -63,20 +63,31 @@ test('trigger the timer method with useful set of tags', async t => {
   const app = createApp(statful);
   app.get('/user/:id', (req, res, next) => res.status(204).send());
 
-  const res = await request(app).get('/').send();
-  const res2 = await request(app).get('/user/56').send();
+  const res = await request(app).get('/user/56').send();
+  const res2 = await request(app).get('/').send();
+
+  // Catch-all Route
+  app.get('*', (req, res, next) => res.status(204).send());
+  const res3 = await request(app).get('/').send();
 
   t.deepEqual(statful.tags[0], {
+    hostname: '127.0.0.1',
+    method: 'GET',
+    route: '/user/:id',
+    statusCode: 204,
+  });
+
+  t.deepEqual(statful.tags[1], {
     hostname: '127.0.0.1',
     method: 'GET',
     route: 'unknown_route',
     statusCode: 404,
   });
 
-  t.deepEqual(statful.tags[1], {
+  t.deepEqual(statful.tags[2], {
     hostname: '127.0.0.1',
     method: 'GET',
-    route: '/user/:id',
+    route: '*',
     statusCode: 204,
   });
 });
