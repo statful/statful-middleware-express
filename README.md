@@ -31,6 +31,16 @@ app.listen(3000);
 
 Most of the configuration is done directly in the statful instance. You can read more about the available options directly from the [Statful repository](https://github.com/statful/statful-client-nodejs#global-configuration).
 
+## Default Metrics
+
+By default, the follow metrics are collected, with the corresponding tags:
+
+  * `response_time`
+    * `hostname`,
+    * `method`: `GET`, `POST`, `PUT`...
+    * `statusCode`: 200, 400, 404 ...
+    * `route`: Either the route handler's name, the route path or `unknown_route`. e.g.: `/users/:id?`
+
 ## Authors
 
 [Mindera - Software Craft](https://github.com/Mindera)
