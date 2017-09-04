@@ -73,21 +73,18 @@ test('trigger the timer method with useful set of tags', async t => {
   t.deepEqual(statful.tags[0], {
     hostname: '127.0.0.1',
     method: 'GET',
-    route: '/user/:id',
     statusCode: 204,
   });
 
   t.deepEqual(statful.tags[1], {
     hostname: '127.0.0.1',
     method: 'GET',
-    route: 'unknown_route',
     statusCode: 404,
   });
 
   t.deepEqual(statful.tags[2], {
     hostname: '127.0.0.1',
     method: 'GET',
-    route: '*',
     statusCode: 204,
   });
 });
