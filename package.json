@@ -1,6 +1,6 @@
 {
   "name": "statful-middleware-express",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Express middleware to automatically register Statful metrics.",
   "main": "./src/index.js",
   "repository": "https://github.com/statful/statful-middleware-express",
