@@ -8,7 +8,6 @@ module.exports = statful => (req, res, next) => {
         hostname: req.hostname,
         method: req.method,
         statusCode: res.statusCode,
-        route: req.route ? req.route.path : 'unknown_route',
       },
     })
   );
