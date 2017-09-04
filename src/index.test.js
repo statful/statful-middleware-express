@@ -74,17 +74,40 @@ test('trigger the timer method with useful set of tags', async t => {
     hostname: '127.0.0.1',
     method: 'GET',
     statusCode: 204,
+    statusCodeCategory: 'success'
   });
 
   t.deepEqual(statful.tags[1], {
     hostname: '127.0.0.1',
     method: 'GET',
     statusCode: 404,
+    statusCodeCategory: 'client_error'
   });
 
   t.deepEqual(statful.tags[2], {
     hostname: '127.0.0.1',
     method: 'GET',
     statusCode: 204,
+    statusCodeCategory: 'success'
   });
 });
+
+test('Ensure that it works correctly with static resources', async t => {
+  const statful = {
+    tags: [],
+    timer(event, interval, options) {
+      this.tags.push(options.tags);
+    },
+  };
+  const app = createApp(statful);
+  app.use(express.static('public')) 
+
+  await request(app).get('/foo.js').send();
+
+  t.deepEqual(statful.tags[0], {
+    hostname: '127.0.0.1',
+    method: 'GET',
+    statusCode: 404,
+    statusCodeCategory: 'client_error'
+  })
+})
