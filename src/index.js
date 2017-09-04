@@ -10,7 +10,6 @@ module.exports = statful => (req, res, next) => {
         method: req.method,
         statusCode: res.statusCode,
         statusCodeCategory: getStatusCategory(res.statusCode),
-        route: req.route ? req.route.path : 'unknown_route',
       },
     })
   ));
