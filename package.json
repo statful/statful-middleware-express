@@ -1,6 +1,6 @@
 {
   "name": "statful-middleware-express",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Express middleware to automatically register Statful metrics.",
   "main": "./src/index.js",
   "repository": "https://github.com/statful/statful-middleware-express",
@@ -9,13 +9,15 @@
   "devDependencies": {
     "express": "^4.16.3",
     "jest": "^23.4.0",
-    "jest-cli": "^23.4.0",
-    "supertest": "^3.1.0"
+    "jest-cli": "^23.4.0"
   },
   "peerDependencies": {
     "statful-client": "4.3.4"
   },
   "scripts": {
     "test": "jest --coverage"
+  },
+  "engines": {
+    "node": ">=8.11.3"
   }
 }
