@@ -1,20 +1,25 @@
 const timer = require("./timer");
-const test = require("ava");
 
-test("return a function to stop timer", t => {
-  const start = timer();
-  const stop = start();
+describe("Timer", () => {
+  it("should not be null", () => {
+    expect(timer).not.toBeNull();
+  });
 
-  t.is(typeof start, "function");
-  t.is(typeof stop, "number");
-});
+  it("should return a function to stop timer", () => {
+    const start = timer();
+    const stop = start();
 
-test("return interval between end time and start time", t => {
-  const start = new Date("2017-07-06T14:43:17.150Z");
-  const end = new Date("2017-07-06T14:43:39.670Z");
+    expect(typeof start).toEqual("function");
+    expect(typeof stop).toEqual("number");
+  });
 
-  const timerStart = timer(start);
-  const timerEnd = timerStart(end);
+  it("should return interval between end time and start time", () => {
+    const start = new Date("2017-07-06T14:43:17.150Z");
+    const end = new Date("2017-07-06T14:43:39.670Z");
 
-  t.is(timerEnd, end - start);
+    const timerStart = timer(start);
+    const timerEnd = timerStart(end);
+
+    expect(timerEnd).toEqual(end - start);
+  });
 });

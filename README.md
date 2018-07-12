@@ -1,6 +1,3 @@
-![statful](https://avatars1.githubusercontent.com/u/20299158?v=3&s=200)
-![expressjs](https://camo.githubusercontent.com/b0c9dc0e2f5bcd190403159a24d4a541e496e30a/68747470733a2f2f636f6c69676f2e696f2f696d616765732f657870726573732e737667)
-
 # statful-middleware-express
 
 A common pattern in expressjs/restify applications it to gather response times from all received requests, this middleware takes care of collecting common useful metrics automatically.
