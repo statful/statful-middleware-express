@@ -1,19 +1,19 @@
 {
   "name": "statful-middleware-express",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Express middleware to automatically register Statful metrics.",
   "main": "./src/index.js",
   "repository": "https://github.com/statful/statful-middleware-express",
   "author": "Luis Couto <luis.couto@mindera.com>",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^0.20.0",
-    "express": "^4.15.3",
-    "nyc": "^11.0.3",
+    "ava": "^0.25.0",
+    "express": "^4.16.3",
+    "nyc": "^12.0.2",
     "supertest": "^3.0.0"
   },
   "peerDependencies": {
-    "statful-client": "4.x"
+    "statful-client": "4.3.4"
   },
   "scripts": {
     "test": "nyc ava"
