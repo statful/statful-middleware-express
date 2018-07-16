@@ -11,7 +11,8 @@ module.exports = statful => async (req, res, next) => {
       hostname: req.hostname,
       method: req.method,
       statusCode: res.statusCode,
-      statusCodeCategory: getStatusCategory(res.statusCode)
+      statusCodeCategory: getStatusCategory(res.statusCode),
+      route: req.route.path
     }
   });
 };

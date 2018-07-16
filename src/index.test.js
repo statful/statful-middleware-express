@@ -12,7 +12,10 @@ describe("Middleware", () => {
     };
     const req = {
       hostname: "localhost",
-      method: "GET"
+      method: "GET",
+      route: {
+        path: "/index"
+      }
     };
 
     const res = {
@@ -30,7 +33,8 @@ describe("Middleware", () => {
           hostname: "localhost",
           method: "GET",
           statusCode: 200,
-          statusCodeCategory: "success"
+          statusCodeCategory: "success",
+          route: "/index"
         }
       }
     );
