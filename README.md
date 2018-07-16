@@ -39,10 +39,15 @@ Most of the configuration is done directly in the statful instance. You can read
 By default, the follow metrics are collected, with the corresponding tags:
 
 - `response_time`
-  - `hostname`,
-  - `method`: `GET`, `POST`, `PUT`...
+  - `hostname`
+  - `method`: GET, POST, PUT ...
   - `statusCode`: 200, 400, 404 ...
-  - `statusCodeCategory`: [Categories](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+  - `statusCodeCategory`
+    - informational
+    - success
+    - redirection
+    - client_error
+    - server_error
   - `route`: Either the route handler's name, the route path or `unknown_route`. e.g.: `/users/:id?`
 
 ## Authors
