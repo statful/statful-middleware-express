@@ -42,6 +42,7 @@ By default, the follow metrics are collected, with the corresponding tags:
   - `hostname`,
   - `method`: `GET`, `POST`, `PUT`...
   - `statusCode`: 200, 400, 404 ...
+  - `statusCodeCategory`: [Categories](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
   - `route`: Either the route handler's name, the route path or `unknown_route`. e.g.: `/users/:id?`
 
 ## Authors
