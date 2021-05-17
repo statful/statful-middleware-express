@@ -8,8 +8,9 @@
   "license": "MIT",
   "devDependencies": {
     "express": "^4.16.4",
-    "jest": "^24.5.0",
-    "jest-cli": "^24.5.0"
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
+    "node-notifier": ">=8.0.1"
   },
   "peerDependencies": {
     "statful-client": "4.3.4"
@@ -19,5 +20,9 @@
   },
   "engines": {
     "node": ">=8.11.3"
+  },
+  "dependencies": {
+    "merge": ">=2.1.1",
+    "node-notifier": ">=8.0.1"
   }
 }
